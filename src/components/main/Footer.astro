@@ -1,3 +1,7 @@
+---
+import { Icon } from "astro-icon";
+---
+
 <footer>
     <div>
         <div class="footer-links">
@@ -18,11 +22,17 @@
             <a href="https://www.google.cl/">Google</a>
         </div>
         <div class="footer-aside">
-            <h3>Siguenos</h3>
+            <h3>Síguenos</h3>
             <div class="social-media">
-                <a href="https://www.facebook.com" aria-label="Link a página de Facebook"><i class="fa-brands fa-square-facebook"></i></a>
-                <a href="https://www.whatsapp.com" aria-label="Link a número de Whatsapp"><i class="fa-brands fa-square-whatsapp"></i></a>
-                <a href="https://www.instagram.com" aria-label="Link a página de Instagram"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="">
+                    <Icon name="mdi:facebook" />
+                </a>
+                <a href="">
+                    <Icon name="mdi:whatsapp" />
+                </a>
+                <a href="https://www.instagram.com" aria-label="Link a página de Instagram">
+                    <Icon name="mdi:instagram" />
+                </a>
             </div>
         </div>
     </div>
@@ -82,12 +92,6 @@
         text-align: center;
     }
 
-
-    .footer-aside .social-media {
-        display: flex;
-        gap: .25rem;
-    }
-
     .footer-aside .social-media > div {
         display: flex;
         justify-content: space-between;
@@ -104,6 +108,10 @@
     .social-media a:hover {
         scale: .95;
         opacity: .5;
+    }
+
+    .social-media svg {
+        width: 2rem;
     }
 
     @media only screen and (max-width: 880px) {
