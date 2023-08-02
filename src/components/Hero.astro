@@ -1,19 +1,18 @@
 <header id="Home">
     <div class="hero-wrapper">
         <div class="headers-mask">
-            <h1>Sin importar tu meta</h1>
-            <h2>Con nosotros <span class="important-contrast">lo puedes lograr</span> sin duda</h2>
+            <h1>Asesoramiento para tu PYME</h1>
+            <h2>Por todo <span class="important-contrast">Iquique</span>, personalizado a tus necesidades </h2>
         </div>
-        <a href="#Contact" aria-label="Contáctanos" class="call-to-action">
-            
+        <a href="#Contact" aria-label="Asesorate con nosotros" class="call-to-action">
+            Asesórate
         </a>
 
-        <div class="custom-shape-divider-bottom-1669747585">
+        <div class="custom-shape-divider-bottom-1690984327">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
             </svg>
         </div>
-    </div>
 </header>
 
 <style>
@@ -31,7 +30,7 @@
                 transparent,
                 transparent
             ),
-            url('/img/her/hero.jpg');
+            url('/img/hero/hero.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -40,7 +39,8 @@
         isolation: isolate;
         z-index: 0;
 
-        min-height: 100svh;
+        min-height: 150svh;
+        min-height: 150vh;
     }
 
     #Home::after {
@@ -60,8 +60,8 @@
         flex-direction: column;
         width: 100%;
         max-width: 1100px;
-        min-height: 100vh;
-        min-height: 110svh;
+        min-height: 150svh;
+        min-height: 150vh;
         margin: 0 auto;
         text-align: center;
     }
@@ -95,9 +95,9 @@
         background-image: linear-gradient(
             145deg,
             hsl(var(--important)) 5%,
-            hsl(223, 60%, 55%) 10%,
-            hsl(223, 70%, 65%) 20%,
-            hsl(223, 80%, 74%) 30%
+            hsl(var(--important), .8) 5%,
+            hsl(var(--important), .5) 50%,
+            hsl(var(--important), .1) 90%
             );
         background-size: 400%;
         font-size: calc(var(--font) * 2);
@@ -105,16 +105,9 @@
         text-align: center;
         text-decoration: none;
         
-        border: .1rem solid hsl(var(--white));
-        border-radius: .75rem;
+        border: .1rem solid hsl(var(--white), .2);
         overflow: hidden;
         backdrop-filter: blur(10px);
-    }
-
-    .call-to-action::before {
-        content: 'Contáctanos';
-        color: inherit;
-        opacity: 1;
     }
 
     .call-to-action::after {
@@ -143,7 +136,7 @@
         transition: all 300ms linear;
     }
 
-    .custom-shape-divider-bottom-1669747585 {
+    .custom-shape-divider-bottom-1690984327 {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -153,15 +146,14 @@
         transform: rotate(180deg);
     }
 
-    .custom-shape-divider-bottom-1669747585 svg {
+    .custom-shape-divider-bottom-1690984327 svg {
         position: relative;
         display: block;
         width: calc(100% + 1.3px);
-        height: 108px;
-        transform: rotateY(180deg);
+        height: 100px;
     }
 
-    .custom-shape-divider-bottom-1669747585 .shape-fill {
+    .custom-shape-divider-bottom-1690984327 .shape-fill {
         fill: hsl(var(--main-dark));
     }
 

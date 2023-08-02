@@ -171,6 +171,10 @@ const { favicon = "favicon.svg", faviconLight = "" } = Astro.props as Props;
 		background-color: hsl(var(--white));
 	}
 
+	.divider:is(.invert) {
+		background-color: transparent;
+	}
+
 	.tag {
 		display: inline-block;
 		padding: .15em .35em;
