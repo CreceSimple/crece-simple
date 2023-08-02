@@ -1,0 +1,28 @@
+.tagcloud {
+  font-size: 1.5rem;
+}
+
+.tagcloud--item {
+  padding: .25rem .5rem;
+  color: hsl(var(--white));
+  background-color: hsl(var(--main-dark));
+  border-radius: var(--radius);
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+.tagcloud--item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  outline: 2px solid hsl(var(--important));
+  outline-offset: 3px;
+}
+
+.tagcloud--item:is(:hover, :focus-visible) {
+  background-color: hsl(var(--important));
+  opacity: 1 !important;
+  z-index: 100 !important;
+}

@@ -1,0 +1,242 @@
+<section id="Proposals">
+    <div>
+        <h3 class="important-contrast">Nosotros</h3>
+        <h2>Quienes somos</h2>
+        <div class="wrapper">
+            <div class="about-us">
+                <picture>
+                    <source media="(min-width: 700px)" srcset="https://images.unsplash.com/photo-1664575600796-ffa828c5cb6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80 450w" />
+                    <source media="(max-width: 699px)" srcset="https://images.unsplash.com/photo-1664575600796-ffa828c5cb6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80 800w" />
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1664575600796-ffa828c5cb6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Lorem picsum" style="max-width: 100%;">
+                </picture>
+                <div>
+                    <h3>Te invitamos a conocernos</h3>
+                    <p>Con mas de 30 años de experiencia en el rubro, <b class="important-contrast">somos la empresa número 1 de tecnología en el sector</b>. Entre nuestros trabajos destacan la gran gracia de nuestro señor y amo, al cual debemos toda nuestra vida y nuestro bienestar. Somos secos en lo que hacemos y sin duda no nos dejamos menoscabar.</p>
+                    <h4>Nuestras 3 grandes aristas son:</h4>
+                    <ul>
+                        <li>Compromiso</li>
+                        <li>Calidad</li>
+                        <li>Gestión</li>
+                    </ul>
+                    <details>
+                        <summary>
+                            Visión
+                        </summary>
+                        <p>
+                            Nuestra visión es que todo el mundo se entere de lo que venimos a hacer, con una amalgama de posibilidades nunca antes vista.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>
+                            Misión
+                        </summary>
+                        <p>
+                            Nuestra misión es proporcionar uno de los mejores servicios antes vistos por la sociedad.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h3 class="important-contrast">Propuestas</h3>
+        <h2>Todo lo que buscas en un solo lugar</h2>
+        <div class="proposals-wrapper">
+            <div class="proposal fade">
+                <span class="icon"><i class="fa-solid fa-wrench"></i></span>
+                <h3 class="title">Calidad</h3>
+                <p class="description">Con mas de 40 años en el rubro de la construccion. Cumplimos con todos los estandards mas rigurosos de calidad maximo, directo a tu hogar.</p>
+            </div>
+            <div class="proposal fade">
+                <span class="icon"><i class="fa-solid fa-bolt"></i></span>
+                <h3 class="title">Rapidez</h3>
+                <p class="description">Entrega en <b class="important-contrast">menos de 3 dias</b> desde el momento de la transaccion. Un dia de manufactura, uno de mantencion, y finalmente el ultimo de entrega.</p>
+            </div>
+            <div class="proposal fade">
+                <span class="icon"><i class="fa-solid fa-handshake"></i></span>
+                <h3 class="title">Disposicion</h3>
+                <p class="description">Con atencion al publico automatizada las 24 horas del dia, los 7 dias de la semana. Contamos con una infrastructura robusta y de la mas alta calidad.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    #Proposals {
+        background-color: hsl(var(--main-dark));
+    }
+
+    #Proposals > div:first-child {
+        margin-block-end: 5rem;
+    }
+
+    #Proposals > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        filter: hue-rotate();
+
+
+        width: 100%;
+        max-width: 1100px;
+        margin-inline: auto;
+        padding: var(--padding);
+    }
+
+    #Proposals > div > h3 {
+        margin: 0;
+        font-size: .875rem;
+        color: hsl(var(--important));    
+
+        text-align: center;
+    }
+
+    #Proposals > div > h2 {
+        font-size: 3rem;
+        margin-block-start: 0;
+        
+        text-align: center;
+    }
+
+    .wrapper {
+        display: flex;
+    }
+
+    .about-us {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+
+        max-height: min-content;
+    }
+
+    img {
+        border-radius: .25rem;
+    }
+
+    .about-us h3 {
+        margin: 0;
+    }
+
+    @media only screen and (max-width: 699px) {
+        .about-us {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1rem;
+        }
+    }
+
+    details {
+        border: 1px solid hsl(var(--border-clr),20%);
+        border-top: 2px solid hsl(var(--important));
+        border-bottom: 2px solid hsl(var(--important));
+        border-radius: var(--radius-accent);
+        cursor: pointer;
+        pointer-events: all;
+    }
+
+    details:first-of-type {
+        margin-block-end: 1rem;
+    }
+
+    details summary:is(:hover, :focus, :focus-visible) {
+        outline: 0;
+    }
+
+    details:has(summary:is(:hover, :focus, :focus-visible)) {
+        border-top: 2px solid hsl(var(--white));
+        border-bottom: 2px solid hsl(var(--white));
+    }
+
+    details > * {
+        padding: 1rem;
+    }
+
+    details summary {
+        font-size: 1.5rem;
+        user-select: none;
+    }
+
+    details::marker {
+        unicode-bidi: embed;
+        font-variant-numeric: proportional-nums;
+    }
+
+    details[open] {
+        border-top: none !important;
+        border-bottom: 1px solid hsl(var(--border-clr),20%) !important;
+
+    }
+
+    details[open] > summary {
+        background-image: linear-gradient(
+            145deg,
+            hsl(var(--important)) 5%,
+            hsl(223, 60%, 55%) 10%,
+            hsl(223, 70%, 65%) 20%,
+            hsl(223, 80%, 74%) 30%
+            );
+        background-size: 400%;
+        color: hsl(var(--white));
+        border-radius: .5rem;
+    }
+
+    details[open] > p {
+        height: 100%;
+        transition: height 300ms ease;
+    }
+
+    details > p {
+        margin: 0;
+        height: 0;
+    }
+    
+    details[open] > p {
+        /* color: hsl(var(--main-dark)); */
+        /* background-color: hsl(var(--white)); */
+    }
+
+    .proposals-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+        gap: var(--padding);
+        place-items: center;
+        justify-items: center;
+    }
+
+    .proposal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        max-width: 18rem;
+
+        padding: var(--padding);
+        border-radius: var(--radius-accent);
+    }
+
+    .proposal:is(:hover, :focus-visible) {
+        background-color: hsl(var(--white), 2%);
+    }
+
+    .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: calc(var(--padding) + 0.75rem);
+        height: calc(var(--padding) + 0.75rem);
+
+        padding: calc(var(--padding) + .75rem);
+        background-color: hsl(var(--important));
+        border-radius: 50%;
+    }
+
+    .icon i {
+        font-size: 1.5rem;
+    }
+
+    .title {
+        text-align: center;
+    }
+</style>
