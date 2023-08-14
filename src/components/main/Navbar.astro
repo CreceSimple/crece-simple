@@ -1,7 +1,13 @@
+---
+import Image from "astro/components/Image.astro";
+
+---
+
 <nav class="navbar">
     <div class="navbar-wrapper">
         <a href="/" class="logo" aria-label="Logo Crece Simple">
             <img src="../img/deico.png" alt="Logo Crece Simple">
+            <Image src={'../img/logo/logo.png'} width={40} height={40} format="webp" />
         </a>
         <input id="checkbox" type="checkbox" name="checkbox" value="checkbox"/>
         <label class="navbar-toggler" for="checkbox">
