@@ -9,22 +9,47 @@ import { Icon } from 'astro-icon';
         <h2>¿Quienes Somos?</h2>
         <div class="wrapper">
             <div class="about-us">
-                <picture>
+                <div class="image-picker">
+                    <div class="image-holder selected" data-member="jorge" tabindex="0">
+                        <img class="members-image" src="/img/avatar/jorge.jpg" alt="Foto de Jorge Cortez">
+                    </div>
+                    <div class="image-holder" data-member="maria" tabindex="0">
+                        <img class="members-image" src="/img/avatar/maria.jpg" alt="Foto de María José Delgado">
+                    </div>
+                    <div class="image-holder" data-member="arantzazu" tabindex="0">
+                        <img class="members-image" src="/img/avatar/arantzazu.jpg" alt="Foto de Arantzazú Calderón">
+                    </div>
+
+                </div>
+                <div class="member-description">
+                    <div class="display" data-member="jorge">
+                        <h4>Jorge Cortez</h4>
+                        <h5><Icon name="mdi:account-box" /> Ingeniero Comercial</h5>
+                        
+                        <h5><Icon name="mdi:chart-bar" /> Años de experiencia: <span class="important-contrast">5</span></h5>
+                        <hr>
+                        <h4>Sobre mí</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iure consequatur possimus rem ducimus iusto provident autem sint iste, quidem assumenda sapiente eum deserunt quae aut ipsum maxime culpa nulla?</p>
+
+                        <h4>Lo que me apasiona</h4>
+                        <ul>
+                            <li>Comer</li>
+                            <li>Bailar</li>
+                            <li>Saltar</li>
+                        </ul>
+                    </div>
+                    <div data-member="maria">
+
+                    </div>
+                    <div data-member="arantzazu">
+                        
+                    </div>
+                </div>
+                <!-- <picture>
                     <source media="(min-width: 700px)" srcset="/img/logo/logo-name.webp 450w" />
                     <source media="(max-width: 699px)" srcset="/img/logo/logo-name.webp 800w" />
                     <img loading="lazy" src="/img/logo/logo-name.webp" alt="Lorem picsum" style="max-width: 100%;">
-                </picture>
-                <div>
-                    <h3><Icon class="about-us-icon" name="mdi:scale-balance" /> Estudio jurídico</h3>
-                    <p>Somos un estudio jurídico de abogados profesionales y comprometidos con la misión de brindar soluciones legales de calidad para proteger tus intereses. Ubicados en Iquique y Alto Hospicio, Región de Tarápaca.</p>
-                    <p>Nuestro Estudio Jurídico está liderado por Michel Campillay Rondón, abogado titulado por la PUCV, <b class="important-contrast">especializado en derecho comercial y civil</b>. Con amplia experiencia en representar tanto a individuos como empresas.</p>
-                    <h4>Nuestros servicios jurídicos:</h4>
-                    <ul>
-                        <li>Representación judicial</li>
-                        <li>Redacción de escrituras públicas y contratos</li>
-                        <li>Asesoría legal general</li>
-                    </ul>
-                </div>
+                </picture> -->
             </div>
         </div>
     </div>
@@ -52,7 +77,97 @@ import { Icon } from 'astro-icon';
     </div>
 </section>
 
-<style>
+<style lang="scss">
+    .about-us {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+
+        @media only screen and (max-width: 860px) {
+            grid-template-columns: 1fr;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: .25rem;
+        }
+
+        .image-picker {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem;
+
+            .image-holder {
+                flex: 1 0 calc(50% - 1rem);
+
+                border-radius: .25rem;
+                cursor: pointer;
+
+                &:is(:hover, :focus-visible) {
+                    outline: 1px solid hsl(var(--white));
+                    outline-offset: 2px;
+                }
+
+                &:is(.selected) {
+                    flex: 1 0 100%;
+                }
+            }
+        }
+
+        .member-description {
+            & > * {
+                display: flex;
+                flex-direction: column;
+
+                opacity: 0;
+                visibility: collapse;
+                transition: opacity 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+                &:is(.display) {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                hr {
+                    width: 100%;
+                    border-color: hsl(0 0% 35% / .5);
+                }
+
+                h4 {
+                    font-size: 2rem;
+                    margin-block-end: 0;
+                    margin-block-start: 1.5rem;
+
+                    &:first-child {
+                        margin-block-start: 0;
+                    }
+                }
+
+                h5 {
+                    margin: 0;
+                    // padding-inline-start: .75rem;
+                    color: gray;
+
+                    svg {
+                        width: 20px;
+                        position: relative;
+                        top: 4px;
+                    }
+                }
+
+                p {
+                    padding-inline-start: .75rem;
+                    hyphens: auto;
+                }
+            }
+        }
+    }
+
+
     .main-picture {
         max-width: 100%;
     }
@@ -107,24 +222,6 @@ import { Icon } from 'astro-icon';
         margin-block-start: 0;
         
         text-align: center;
-    }
-
-    .wrapper {
-        display: flex;
-    }
-
-    .about-us {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 3rem;
-
-        max-height: min-content;
-    }
-
-    .about-us img {
-        width: 100%;
-        height: auto;
-        border-radius: .25rem;
     }
 
     .about-us h3 {
@@ -194,3 +291,41 @@ import { Icon } from 'astro-icon';
         text-align: center;
     }
 </style>
+
+<script lang="js">
+window.addEventListener('load', function() {
+    const imagePicker = document.querySelector('.image-picker');
+    const imageHolders = document.querySelectorAll('.image-holder');
+    const memberDescriptions = document.querySelectorAll('.member-description > div');
+
+    function selectImageHolder(imageHolder, index) {
+        imageHolders.forEach((imageHolder) => {
+            imageHolder.classList.remove('selected');
+        });
+        memberDescriptions.forEach((memberDescription) => {
+            memberDescription.classList.remove('display');
+        });
+        imageHolder.classList.add('selected');
+        memberDescriptions[index].classList.add('display');
+        imagePicker.prepend(imageHolder);
+    }
+
+    imageHolders.forEach((imageHolder, index) => {
+        imageHolder.addEventListener('click', function() {
+            selectImageHolder(imageHolder, index);
+        });
+        imageHolder.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                selectImageHolder(imageHolder, index);
+            } else if (event.key === 'ArrowRight') {
+                const nextIndex = (index + 1) % imageHolders.length;
+                selectImageHolder(imageHolders[nextIndex], nextIndex);
+            } else if (event.key === 'ArrowLeft') {
+                const prevIndex = (index - 1 + imageHolders.length) % imageHolders.length;
+                selectImageHolder(imageHolders[prevIndex], prevIndex);
+            }
+        });
+    });
+});
+
+</script>
