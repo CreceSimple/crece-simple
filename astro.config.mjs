@@ -1,9 +1,12 @@
 import { defineConfig } from 'astro/config';
-import { astroImageTools } from "astro-imagetools";
+import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
-    integrations: [astroImageTools],
+  // ...
+  integrations: [
+    image({
+      serviceEntryPoint: '@astrojs/image/sharp',
+    }),
+  ],
 });
-
-
