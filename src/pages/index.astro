@@ -6,6 +6,7 @@ import About from '../components/About.astro';
 import Testimonials from '../components/Testimonials.astro';
 import Contact from '../components/Contact.astro';
 import { Icon } from 'astro-icon';
+import Products from '../components/Products.astro';
 ---
 
 <Layout
@@ -15,11 +16,11 @@ import { Icon } from 'astro-icon';
   ogDescription="Asesoría y gestión empresarial personalizada para tu empresa."
   ogUrl="https://deft-tulumba-dee734.netlify.app/"
   canonicalURL="https://deft-tulumba-dee734.netlify.app/"
-  favicon="/favicon/favicon.svg"
-  faviconLight="/favicon/favicon.svg">
+  favicon="./favicon.svg">
 	<main>
 		<Hero />
 		<About />
+        <Products />
 		<Testimonials />
 		<Contact />
 	</main>

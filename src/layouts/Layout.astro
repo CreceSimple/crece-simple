@@ -19,16 +19,16 @@ const { ogTitle = "" } = Astro.props as Props;
 const { ogDescription = "" } = Astro.props as Props;
 const { ogUrl } = Astro.props as Props;
 const { canonicalURL } = Astro.props as Props;
-const { favicon = "favicon.svg", faviconLight = "" } = Astro.props as Props;
+const { favicon } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
+		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link rel="icon" type="image/svg+xml" href={favicon} media="(prefers-color-scheme: dark)" />
-		<link rel="icon" type="image/svg+xml" href={faviconLight} media="(prefers-color-scheme: light)" />
+		<link rel="icon" type="image/svg+xml" href={favicon} />
 
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
@@ -43,8 +43,6 @@ const { favicon = "favicon.svg", faviconLight = "" } = Astro.props as Props;
 		<meta property="og:image:height" content="180" />
 		
 		<link rel="canonical" href={canonicalURL} />
-
-		<script defer src="https://kit.fontawesome.com/76c49369ed.js" crossorigin="anonymous"></script>
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
