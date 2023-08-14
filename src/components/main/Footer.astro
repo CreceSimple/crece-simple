@@ -6,8 +6,9 @@ import { Icon } from "astro-icon";
     <div>
         <div class="footer-links">
             <a href="#Home">Inicio</a>
-            <a href="#About">Nosotros</a>
+            <a href="#About-us">Quienes Somos</a>
             <a href="#Products">Productos</a>
+            <a href="#Testimonials">Afiliados</a>
             <a href="#Contact">Contacto</a>
         </div>
         <div class="footer-links">
@@ -15,11 +16,10 @@ import { Icon } from "astro-icon";
             <a href="https://www.shopify.com/">Shopify</a>
             <a href="https://www.amazon.com/">Amazon</a>
         </div>
-        <div class="footer-links">
-            <a href="https://www.facebook.com/">Facebook</a>
-            <a href="https://www.whatsapp.com/">Whatsapp</a>
-            <a href="https://www.instagram.com/">Instagram</a>
-            <a href="https://www.google.cl/">Google</a>
+        <div class="contact-info">
+            <p><Icon name="mdi:map-marker" /> <span class="bold">Iquique y Alto Hospicio,</span> Región de Tarapacá, Chile.</p>
+            <p><Icon name="mdi:phone" /> Teléfono: <a href="tel:56952365795" class="bold">+56 9 1234 5678</a></p>
+            <p><Icon name="mdi:email" /> Correo electrónico: <a href="mailto: estudiojuridicomichelcampilay@gmail.com" class="bold">Su mail</a></p>
         </div>
         <div class="footer-aside">
             <h3>Síguenos</h3>
@@ -133,5 +133,32 @@ import { Icon } from "astro-icon";
             margin: auto;
             padding-bottom: 1em;
         }
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+        padding-bottom: .5em;
+        border-bottom: 1px solid hsl(var(--border-clr), 20%);
+    }
+
+    .contact-info p {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: .25rem;
+        margin: 0;
+        color: hsl(var(--nav-link), 50%);
+    }
+
+    .contact-info p svg {
+        width: 20px;
+        aspect-ratio: 1;
+        position: relative;
+    }
+
+    .contact-info p .bold {
+        color: hsl(var(--white)) !important;
     }
 </style>
