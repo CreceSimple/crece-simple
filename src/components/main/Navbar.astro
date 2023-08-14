@@ -1,18 +1,17 @@
 ---
-import Image from "astro/components/Image.astro";
+import { Icon } from "astro-icon";
 
 ---
 
 <nav class="navbar">
     <div class="navbar-wrapper">
         <a href="/" class="logo" aria-label="Logo Crece Simple">
-            <img src="../img/deico.png" alt="Logo Crece Simple">
-            <Image src={'../img/logo/logo.png'} width={40} height={40} format="webp" />
+            <img src="../img/logo/logo.png" alt="Logo Crece Simple">
         </a>
         <input id="checkbox" type="checkbox" name="checkbox" value="checkbox"/>
         <label class="navbar-toggler" for="checkbox">
         <div class="toggler">
-            <img src="../svg/hamburger.svg" alt="Hamburger toggler">
+            <Icon name="ph:list-fill" />
         </div>
         </label>
         <div class="navbar-items">
@@ -60,8 +59,8 @@ import Image from "astro/components/Image.astro";
     }
 
     .navbar-wrapper .logo img {
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
         object-fit: contain;
     }
 
@@ -85,15 +84,15 @@ import Image from "astro/components/Image.astro";
         align-items: center;
         padding: .25em;
 
-        color: #B0B0B0;
-        border: 1px solid #B0B0B0;
+        color: hsl(var(--white));
+        border: 1px solid hsl(var(--white));
         border-radius: var(--radius);
 
         z-index: 2;
     }
 
     .toggler:is(:hover, :focus-within) {
-        opacity: .5;
+        opacity: .8;
     }
 
     .toggler:is(:active) {
@@ -101,7 +100,7 @@ import Image from "astro/components/Image.astro";
         box-shadow: 0 0 0 2px hsl(var(--text));
     }
 
-    .toggler img {
+    .toggler svg {
         width: 32px;
         height: 32px;
     }
