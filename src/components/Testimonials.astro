@@ -161,8 +161,7 @@
         flex-direction: column;
 
         padding: calc(var(--padding) * 3) calc(var(--padding) * 2) calc(var(--padding) * 2);
-        /* color: hsl(var) */
-        background-color: hsl(var(--important));
+        background-color: hsl(var(--secondary));
         border-radius: var(--radius-accent);
 
         margin-block-end: 4rem;
@@ -187,8 +186,8 @@
         top: var(--position);
         right: var(--position);
 
-        border-top: calc(var(--padding) - .75rem) solid hsl(var(--important));
-        border-right: calc(var(--padding) - .75rem) solid hsl(var(--important));
+        border-top: calc(var(--padding) - .75rem) solid hsl(var(--white));
+        border-right: calc(var(--padding) - .75rem) solid hsl(var(--white));
         border-radius: 0 var(--radius-accent) 0 0;
     }
 
@@ -196,23 +195,23 @@
         left: var(--position);
         bottom: var(--position);
 
-        border-left: calc(var(--padding) - .75rem) solid hsl(var(--important));
-        border-bottom: calc(var(--padding) - .75rem) solid hsl(var(--important));
+        border-left: calc(var(--padding) - .75rem) solid hsl(var(--white));
+        border-bottom: calc(var(--padding) - .75rem) solid hsl(var(--white));
         border-radius: 0 0 0 var(--radius-accent);
     }
 
     li:is(:hover, :focus-visible) .testimonial::before,
     li:is(:hover, :focus-visible) .testimonial::after {
-        --position: 2rem;
+        --position: 1.5rem;
     }
 
     li:is(:hover, :focus-visible) .testimonial {
-        background-color: hsl(var(--main-dark), 97%);
+        background-color: hsl(var(--important), 97%);
         transition: all 1000ms ease;
     }
 
     li:is(:hover, :focus-visible) .testimonial-img {
-        border: .2rem solid hsl(var(--main-dark), 93%);
+        border: .2rem solid hsl(var(--important));
     }
 
     .testimonial-img {
@@ -220,11 +219,12 @@
         top: 0rem;
         left: 4rem;
         transform: translate(-50%, -50%);
-        border: .2rem solid hsl(var(--main-dark));
+        border: .2rem solid hsl(var(--secondary));
         border-radius: .25rem;
         overflow: hidden;
         width: 5rem;
         height: 5rem;
+        transition: all 1000ms ease;
     }
 
     .testimonial-img img {
@@ -284,15 +284,24 @@
         width: 100%;
         display: flex;
         align-items: center;
-        background-color: hsl(var(--important));
+        background-color: hsl(var(--secondary));
         border-radius: .25rem;
         position: relative;
     }
 
-    .box:is(:hover, :focus-visible), .box a:is(:hover, :focus-visible) {
+    .box:is(:hover, :focus-visible) {
+        background-color: hsl(var(--important));
+        transition: background-color 200ms linear;
+    }
+
+    .box a:is(:hover, :focus-visible) {
         opacity: .9;
         outline: 2px solid hsl(var(--important));
         outline-offset: 2px;
+    }
+
+    .box:is(:active) {
+        scale: .97;
     }
 
     .box a {

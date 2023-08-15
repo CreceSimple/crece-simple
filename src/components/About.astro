@@ -19,7 +19,6 @@ import { Icon } from 'astro-icon';
                     <div class="image-holder" data-member="arantzazu" tabindex="0">
                         <img class="members-image" src="/img/avatar/arantzazu.jpg" alt="Foto de Arantzazú Calderón">
                     </div>
-
                 </div>
                 <div class="member-description">
                     <div class="display" data-member="jorge">
@@ -39,10 +38,36 @@ import { Icon } from 'astro-icon';
                         </ul>
                     </div>
                     <div data-member="maria">
+                        <h4>Jorge Cortez</h4>
+                        <h5><Icon name="mdi:account-box" /> Ingeniero Comercial</h5>
+                        
+                        <h5><Icon name="mdi:chart-bar" /> Años de experiencia: <span class="important-contrast">5</span></h5>
+                        <hr>
+                        <h4>Sobre mí</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iure consequatur possimus rem ducimus iusto provident autem sint iste, quidem assumenda sapiente eum deserunt quae aut ipsum maxime culpa nulla?</p>
 
+                        <h4>Lo que me apasiona</h4>
+                        <ul>
+                            <li>Comer</li>
+                            <li>Bailar</li>
+                            <li>Saltar</li>
+                        </ul>
                     </div>
                     <div data-member="arantzazu">
+                        <h4>Jorge Cortez</h4>
+                        <h5><Icon name="mdi:account-box" /> Ingeniero Comercial</h5>
                         
+                        <h5><Icon name="mdi:chart-bar" /> Años de experiencia: <span class="important-contrast">5</span></h5>
+                        <hr>
+                        <h4>Sobre mí</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iure consequatur possimus rem ducimus iusto provident autem sint iste, quidem assumenda sapiente eum deserunt quae aut ipsum maxime culpa nulla?</p>
+
+                        <h4>Lo que me apasiona</h4>
+                        <ul>
+                            <li>Comer</li>
+                            <li>Bailar</li>
+                            <li>Saltar</li>
+                        </ul>
                     </div>
                 </div>
                 <!-- <picture>
@@ -125,11 +150,16 @@ import { Icon } from 'astro-icon';
 
                 opacity: 0;
                 visibility: collapse;
-                transition: opacity 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                position: absolute;
+                pointer-events: none;
+                
 
                 &:is(.display) {
                     opacity: 1;
                     visibility: visible;
+                    position: static;
+                    pointer-events: initial;
+                    transition: opacity 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
                 }
 
                 hr {
@@ -299,6 +329,7 @@ window.addEventListener('load', function() {
     const memberDescriptions = document.querySelectorAll('.member-description > div');
 
     function selectImageHolder(imageHolder, index) {
+        console.log('selectImageHolder', imageHolder, index);
         imageHolders.forEach((imageHolder) => {
             imageHolder.classList.remove('selected');
         });
@@ -311,10 +342,16 @@ window.addEventListener('load', function() {
     }
 
     imageHolders.forEach((imageHolder, index) => {
+        imageHolder.addEventListener('mousedown', function(event) {
+            console.log('mousedown', event);
+            event.preventDefault();
+        });
         imageHolder.addEventListener('click', function() {
+            console.log('click', this);
             selectImageHolder(imageHolder, index);
         });
         imageHolder.addEventListener('keydown', function(event) {
+            console.log('keydown', event);
             if (event.key === 'Enter') {
                 selectImageHolder(imageHolder, index);
             } else if (event.key === 'ArrowRight') {
@@ -327,5 +364,7 @@ window.addEventListener('load', function() {
         });
     });
 });
+
+
 
 </script>
