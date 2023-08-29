@@ -5,8 +5,8 @@ import CallToAction from "./utility/CallToAction.astro";
 <header id="Home">
     <div class="hero-wrapper">
         <div class="headers-mask">
-            <h1>Asesoría para tu PYME</h1>
-            <h2>Por todo <span class="important-contrast">Iquique</span>, personalizado según tus necesidades </h2>
+            <h1 class="important-contrast">Expertos en Asesoría Contable y de negocios</h1>
+            <h2>para <span class="important-contrast">PYMEs</span> en <span class="important-contrast">Iquique</span> y en línea, adaptados a tus requerimientos individuales</h2>
         </div>
         <CallToAction />
 
@@ -41,8 +41,8 @@ import CallToAction from "./utility/CallToAction.astro";
         isolation: isolate;
         z-index: 0;
 
-        min-height: 120svh;
-        min-height: 120vh;
+        min-height: 110vh;
+        min-height: 110svh;
     }
 
     #Home::after {
@@ -69,8 +69,15 @@ import CallToAction from "./utility/CallToAction.astro";
     }
 
     .headers-mask {
-        padding: 1rem;
-        /* backdrop-filter: blur(10px); */
+        display: grid;
+        grid-template-rows: auto 50vh;
+        margin-block-end: 10rem;
+    }
+
+    @media (max-width: 760px) {
+        .headers-mask {
+            padding: 1rem;
+        }
     }
 
     .hero-wrapper h1,
@@ -83,7 +90,7 @@ import CallToAction from "./utility/CallToAction.astro";
     }
 
     .hero-wrapper h2 {
-        font-size: clamp(1rem, 0.6154rem + 1.2308vw, 2rem);
+        font-size: clamp(1.25rem, 0.6154rem + 1.2308vw, 2rem);
     }
 
     .call-to-action {
