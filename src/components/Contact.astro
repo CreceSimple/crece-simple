@@ -44,14 +44,6 @@ import { Icon } from "astro-icon";
                 </button>
             </div>
         </form>
-        <div class="map-wrapper">
-            <h3>Ubicacion</h3>
-            <hr>
-            <h4><i class="fa-solid fa-location-dot"></i> Av. Heroes de la Concepcion #2555</h4>
-            <h4>Local 205 - Segundo piso</h4>
-            <!--The div element for the map -->
-            <iframe title="Mapa de Google Maps" id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3743.629214419023!2d-70.14498374984643!3d-20.232723252951633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915215bc3efe03d9%3A0xe1c9577a6f8ed42c!2sMallplaza%20Iquique!5e0!3m2!1sen!2scl!4v1668007012495!5m2!1sen!2scl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
     </div>
 </section>
 
@@ -86,7 +78,8 @@ import { Icon } from "astro-icon";
 
     /* Contact */
     #Contact {
-        background-color: hsl(var(--main-dark));
+        color: hsl(var(--main-dark));
+        background-color: hsl(var(--white));
     }
 
     .wrapper {
@@ -120,7 +113,7 @@ import { Icon } from "astro-icon";
         margin: 1em auto;
         padding: var(--padding);
         
-        border: 1px solid hsl(var(--border-clr), 20%);
+        border: 1px solid hsl(var(--main-dark), 20%);
         border-top: 5px solid hsl(var(--important));
         border-bottom: 5px solid hsl(var(--important));
         border-radius: var(--radius-accent);
@@ -236,47 +229,5 @@ import { Icon } from "astro-icon";
     .submit-button:is(:active) .email-opened {
         transform: translateX(200%);
         transition: 200ms ease-in;
-    }
-
-    .map-wrapper {
-        width: 100%;
-        max-width: 1100px;
-
-        margin: 1em auto;
-        padding: var(--padding);
-        border: 1px solid hsl(var(--border-clr), 20%);
-        border-top: 5px solid hsl(var(--important));
-        border-bottom: 5px solid hsl(var(--important));
-        border-radius: var(--radius-accent);
-    }
-
-    .map-wrapper h3 {
-        margin: 0;
-    }
-
-    .map-wrapper h4 {
-        color: gray;
-        font-size: calc(var(--font) - 0.1rem);
-    }
-
-    .map-wrapper h4:nth-of-type(1) {
-        margin: 0;
-    }
-
-    .map-wrapper h4:nth-of-type(2) {
-        margin-top: 0;
-    }
-
-    #map {
-        width: 100%;
-        height: clamp(300px, 50vw, 600px);
-        border: 0;
-        border-radius: var(--radius);
-    }
-
-    @media only screen and (max-width: 860px) {
-        #Contact > .wrapper > * {
-            flex: 1 0 100%;
-        }
     }
 </style>
