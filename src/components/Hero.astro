@@ -68,10 +68,13 @@ import CallToAction from "./utility/CallToAction.astro";
         text-align: center;
     }
 
+    .hero-wrapper button {
+        position: absolute;
+    }
+
     .headers-mask {
         display: grid;
         grid-template-rows: auto 50vh;
-        margin-block-end: 10rem;
     }
 
     @media (max-width: 760px) {
@@ -91,58 +94,6 @@ import CallToAction from "./utility/CallToAction.astro";
 
     .hero-wrapper h2 {
         font-size: clamp(1.25rem, 0.6154rem + 1.2308vw, 2rem);
-    }
-
-    .call-to-action {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: min(12ch, 100%);
-        margin-block-start: 1rem;
-        padding: 0 1rem;
-        
-        background-image: linear-gradient(
-            145deg,
-            hsl(var(--important)) 5%,
-            hsl(var(--important), .8) 5%,
-            hsl(var(--important), .5) 50%,
-            hsl(var(--important), .1) 90%
-            );
-        background-size: 400%;
-        font-size: calc(var(--font) * 2);
-        color: hsl(var(--white));
-        text-align: center;
-        text-decoration: none;
-        
-        border: .1rem solid hsl(var(--white), .2);
-        overflow: hidden;
-        backdrop-filter: blur(10px);
-    }
-
-    .call-to-action::after {
-        content: '\f103';
-        font-family: 'Font Awesome 6 Free';
-        font-weight: 900;
-        position: absolute;
-        transform: translate(0%, -100%);
-    }
-
-    .call-to-action:is(:hover, :focus-visible) {
-        border: .1rem solid hsl(var(--important));
-    }
-
-    .call-to-action:is(:hover, :focus-visible)::before {
-        content: '';
-        opacity: 0;
-        transition: opacity 150ms linear;
-    }
-
-    .call-to-action:is(:hover, :focus-visible)::after {
-        position: static;
-        visibility: visible;
-        opacity: 1;
-        transform: translate(0%, 0%);
-        transition: all 300ms linear;
     }
 
     .custom-shape-divider-bottom-1690984327 {
