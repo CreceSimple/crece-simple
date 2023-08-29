@@ -97,8 +97,17 @@ import { Icon } from 'astro-icon';
                 <p class="description">Nuestro equipo de profesionales ofrece soluciones de marketing personalizadas para pequeñas y medianas empresas dentro de la ciudad de Iquique y a nivel nacional, ayudandote a aumentar la visibilidad de tu negocio, atraer más clientes y aumentar tus ventas.</p>
             </div>
         </div>
+
+    </div>
+    <div class="divider">
+        <div class="custom-shape-divider-bottom-1690984327">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+            </svg>
+        </div>
     </div>
 </section>
+
 
 <style lang="scss">
     .about-us {
@@ -218,6 +227,7 @@ import { Icon } from 'astro-icon';
     #About-us {
         color: hsl(var(--main-dark));
         background-color: hsl(var(--white));
+        position: relative;
     }
 
     #About-us > div:first-child {
@@ -313,6 +323,35 @@ import { Icon } from 'astro-icon';
 
     .title {
         text-align: center;
+    }
+
+    .divider {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-width: 100% !important;
+    }
+
+    .custom-shape-divider-bottom-1690984327 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+
+    .custom-shape-divider-bottom-1690984327 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 100px;
+    }
+
+    .custom-shape-divider-bottom-1690984327 .shape-fill {
+        fill: #9cb8bc;
     }
 </style>
 
