@@ -5,7 +5,6 @@ import { Icon } from 'astro-icon';
 
 <section id="About-us">
     <div>
-        <h3 class="important-contrast">¿Quiénes somos?</h3>
         <h2>Nosotros</h2>
         <div class="wrapper">
             <div class="about-us">
@@ -80,23 +79,22 @@ import { Icon } from 'astro-icon';
     </div>
 
     <div>
-        <h3 class="important-contrast">Propuestas</h3>
-        <h2>Nuestros pilares fundamentales</h2>
+        <h2>Te ayudamos en</h2>
         <div class="about-us-wrapper">
             <div class="proposal fade">
                 <span class="icon"><Icon class="proposal-icon" name="mdi:finance" /></span>
-                <h3 class="title">Contabilidad</h3>
-                <p class="description">Nuestro equipo de profesionales capacitados ofrece servicios de contabilidad y finanzas para pequeñas y medianas empresas en Iquique, Chile. Ayudamos a nuestros clientes a <b class="important-contrast">mantener sus cuentas al día</b> y a tomar decisiones financieras informadas.</p>
+                <h3 class="title">Contabilidad y finanzas</h3>
+                <p class="description">Nuestro equipo está capacitado para ofrecer servicios diseñados para optimizar la salud financiera de pequeñas y medianas empresas tanto en Iquique de forma presencial como a nivel nacional de  forma online, así mismo a cumplir con tus obligaciones tributarias ayudándote a tomar decisiones financieras informadas.</p>
             </div>
             <div class="proposal fade">
-                <span class="icon"><Icon class="proposal-icon" name="mdi:human-male-board-poll" /></span>
-                <h3 class="title">Recursos Humanos</h3>
-                <p class="description">En nuestra empresa, ofrecemos servicios de recursos humanos para pequeñas y medianas empresas en Iquique, Chile. Nos encargamos de la gestión del personal, la contratación, la capacitación y el desarrollo de tus empleados para que puedas <b class="important-contrast">enfocarte en hacer crecer tu negocio</b>.</p>
+                <span class="icon"><Icon class="proposal-icon" name="mdi:fountain-pen-tip" /></span>
+                <h3 class="title">Imagen corporativa</h3>
+                <p class="description">En Crece Simple te ayudamos a transformar la percepción que tiene el mundo de tu empresa. Combinamos creatividad y estrategia para construir una identidad única y poderosa que refleje el espíritu de tu marca.</p>
             </div>
             <div class="proposal fade">
-                <span class="icon"><Icon class="proposal-icon" name="mdi:youtube-tv" /></span>
+                <span class="icon"><Icon class="proposal-icon" name="ion:md-megaphone" /></span>
                 <h3 class="title">Marketing</h3>
-                <p class="description">Nuestro equipo de expertos en marketing ofrece soluciones personalizadas para pequeñas y medianas empresas en Iquique, Chile. Ayudamos a nuestros clientes a <b class="important-contrast">aumentar su visibilidad</b> en línea, atraer más clientes y aumentar sus ventas.</p>
+                <p class="description">Nuestro equipo de profesionales ofrece soluciones de marketing personalizadas para pequeñas y medianas empresas dentro de la ciudad de Iquique y a nivel nacional, ayudandote a aumentar la visibilidad de tu negocio, atraer más clientes y aumentar tus ventas.</p>
             </div>
         </div>
     </div>
@@ -191,7 +189,6 @@ import { Icon } from 'astro-icon';
 
                 p {
                     padding-inline-start: .75rem;
-                    hyphens: auto;
                 }
             }
         }
@@ -219,7 +216,8 @@ import { Icon } from 'astro-icon';
     }
 
     #About-us {
-        background-color: hsl(var(--main-dark));
+        color: hsl(var(--main-dark));
+        background-color: hsl(var(--white));
     }
 
     #About-us > div:first-child {
@@ -296,12 +294,8 @@ import { Icon } from 'astro-icon';
         line-height: 1.6;
     }
 
-    .proposal p {
-        hyphens: auto;
-    }
-
     .proposal:is(:hover, :focus-visible) {
-        background-color: hsl(var(--white), 2%);
+        background-color: hsl(var(--main-dark), 5%);
     }
 
     .icon {
