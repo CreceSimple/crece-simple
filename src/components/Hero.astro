@@ -34,15 +34,21 @@ import CallToAction from "./utility/CallToAction.astro";
             ),
             url('/img/hero/hero.jpg');
         background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        background-size: none;
+        background-position: 50% 85%;
 
         position: relative;
         isolation: isolate;
         z-index: 0;
 
-        min-height: 110vh;
-        min-height: 110svh;
+        min-height: 115vh;
+        min-height: 115svh;
+    }
+
+    @media (max-width: 760px) {
+        #Home {
+            background-position: 50% 60%;
+        }
     }
 
     #Home::after {
