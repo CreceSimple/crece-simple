@@ -2,14 +2,6 @@
 import { Icon } from "astro-icon";
 ---
 
-<div class="divider">
-    <div class="custom-shape-divider-bottom-1681399354">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
-        </svg>
-    </div>
-</div>
-
 <section id="Contact">
     <div class="wrapper">
         <form action="https://formsubmit.co/dingodille16@hotmail.com" method="POST">
@@ -55,27 +47,6 @@ import { Icon } from "astro-icon";
         top: 3px;
     }
 
-    .custom-shape-divider-bottom-1681399354 {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-        transform: rotate(180deg);
-    }
-
-    .custom-shape-divider-bottom-1681399354 svg {
-        position: relative;
-        display: block;
-        width: calc(100% + 1.3px);
-        height: 100px;
-    }
-
-    .custom-shape-divider-bottom-1681399354 .shape-fill {
-        fill: hsl(var(--main-dark));
-    }
-
     /* Contact */
     #Contact {
         color: hsl(var(--main-dark));
@@ -109,11 +80,11 @@ import { Icon } from "astro-icon";
         align-items: center;
 
         width: 100%;
-        max-width: 1100px;
+        max-width: 700px;
         margin: 1em auto;
-        padding: var(--padding);
+        padding: 3rem 1rem;
         
-        border: 1px solid hsl(var(--main-dark), 20%);
+        border: 1px solid hsl(var(--main-dark), .5);
         border-top: 5px solid hsl(var(--important));
         border-bottom: 5px solid hsl(var(--important));
         border-radius: var(--radius-accent);
@@ -158,8 +129,8 @@ import { Icon } from "astro-icon";
 
         padding-inline-start: .5em;
 
-        color: hsl(var(--text-contrast));
-        border: none;
+        color: hsl(var(--main-dark));
+        border: 1px solid hsl(var(--main-dark), .5);
         border-radius: var(--radius);
         font-family: inherit;
     }
@@ -168,8 +139,8 @@ import { Icon } from "astro-icon";
         resize: none;
         padding-block-start: .5em;
         padding-inline: .5em;
-        color: hsl(var(--text-contrast));
-        border: none;
+        color: hsl(var(--main-dark));
+        border: 1px solid hsl(var(--main-dark), .5);
         border-radius: var(--radius);
         font-family: inherit;
         font-size: .875rem;

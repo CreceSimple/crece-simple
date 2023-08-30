@@ -1,127 +1,177 @@
 <section id="Testimonials">
-    <div>
-        <h2>Quienes han confiado en nosotros</h2>
-        <div id="Affiliates">
-            <div class="box">
-                <a href="www.google.com" aria-label="Expanded link"></a>
-                <div class="box-img">
-                    <img loading="lazy" src="https://crecesimple.cl/wp-content/uploads/2022/04/CAJA-8X8X4-jpg-768x768.jpg" alt="Logo C&D"></div>
-                <p>C&D</p>
-            </div>
-            <div class="box">
-                <a href="www.google.com" aria-label="Expanded link"></a>
-                <div class="box-img">
-                    <img loading="lazy" src="https://crecesimple.cl/wp-content/uploads/2022/04/GISE-BLACK-jpg-01-980x1024.jpg" alt="Logo Gise Hair"></div>
-                <p>Gise Hair</p>
-            </div>
-            <div class="box">
-                <a href="www.google.com" aria-label="Expanded link"></a>
-                <div class="box-img">
-                    <img loading="lazy" src="https://crecesimple.cl/wp-content/uploads/2022/04/bambini-01-768x802.jpg" alt="Logo Casa Bambini"></div>
-                <p>Casa Bambini</p>
-            </div>
-            <div class="box">
-                <a href="www.google.com" aria-label="Expanded link"></a>
-                <div class="box-img">
-                    <img loading="lazy" src="https://crecesimple.cl/wp-content/uploads/2022/05/pymes-15-14.png" alt="Logo We Clean"></div>
-                <p>We Clean</p>
-            </div>
-            <div class="box">
-                <a href="www.google.com" aria-label="Expanded link"></a>
-                <div class="box-img">
-                    <img loading="lazy" src="https://crecesimple.cl/wp-content/uploads/2022/05/pymes-15-15.png" alt="Logo Churrits"></div>
-                <p>Churrits</p>
-            </div>
+  <div>
+    <h2>Quienes han confiado en nosotros</h2>
+    <div id="Affiliates">
+      <div class="box">
+        <a
+          href="https://www.instagram.com/casabambiniiquique/"
+          aria-label="Casa Bambini">
+          <img
+            loading="lazy"
+            src="/img/logo/casa-bambini.png"
+            alt="Logo Casa Bambini"
+          />
+        </a>
+      </div>
+      <div class="box">
+        <a
+          href="https://www.instagram.com/rincon.parrillero.premium/"
+          aria-label="Rincon Parrilero">
+          <img
+            loading="lazy"
+            src="/img/logo/rincon-parrillero.png"
+            alt="Logo Rincon Parrillero"
+          />
+        </a>
+      </div>
+      <div class="box">
+        <a
+          href="https://www.instagram.com/dulcejulietadulces/"
+          aria-label="Dulce Julieta">
+          <img
+            loading="lazy"
+            src="/img/logo/dulce-julieta.png"
+            alt="Logo Dulce Julieta"
+          />
+        </a>
+      </div>
+      <div class="box">
+        <a
+          href="https://www.instagram.com/monkeycoffee.cl/"
+          aria-label="Monkey Coffee">
+          <img
+            loading="lazy"
+            src="/img/logo/monkey-coffee.png"
+            alt="Logo Monkey Coffee"
+          />
+        </a>
+      </div>
+      <div class="box">
+        <div
+          aria-label="Ikebana Smart Garden">
+          <img
+            loading="lazy"
+            src="/img/logo/ikebana.png"
+            alt="Logo Ikebana Smart Garden"
+          />
         </div>
+      </div>
+      <div class="box">
+        <a
+          href="https://www.youtube.com/@cirojonasconstruccion"
+          aria-label="Ciro Jonas Construccion">
+          <img
+            loading="lazy"
+            src="/img/logo/ciro.png"
+            alt="Logo Ciro Jonas Construccion"
+          />
+        </a>
+      </div>
+      <div class="box">
+        <div
+          aria-label="Deyka">
+          <img
+            loading="lazy"
+            src="/img/logo/deyka.png"
+            alt="Logo Deyka"
+          />
+        </div>
+      </div>
+      <div class="box">
+        <a
+          href="https://www.instagram.com/cafeterianamat.iqq/"
+          aria-label="Namat">
+          <img
+            loading="lazy"
+            src="/img/logo/namat.png"
+            alt="Logo Namat"
+          />
+        </a>
+      </div>
+      <div class="box">
+        <a
+          href="https://www.instagram.com/insupet/"
+          aria-label="Insupet">
+          <img
+            loading="lazy"
+            src="/img/logo/insupet.png"
+            alt="Logo Insupet"
+          />
+        </a>
+      </div>
     </div>
+  </div>
 </section>
 
 <style>
-    h2 {
-        display: flex;
-        justify-content: center;
+  h2 {
+    display: flex;
+    justify-content: center;
 
-        position: relative;
-        color: hsl(var(--main-dark), 90%);
-    }
+    position: relative;
+    color: hsl(var(--main-dark), 90%);
+  }
 
-    #Testimonials > div {
-        width: 100%;
-        max-width: 1100px;
-        margin-inline: auto;
-    }
+  #Testimonials > div {
+    width: 100%;
+    max-width: 1100px;
+    margin-inline: auto;
+  }
 
-    #Affiliates {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
-        gap: 1rem;
-        justify-items: center;
-    }
+  #Affiliates {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(min(calc(150px + 0.5rem), 100%), 1fr)
+    );
+    gap: 2rem;
+    justify-items: center;
+    padding-inline: 1rem;
+  }
 
-    .box {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        background-color: hsl(var(--secondary));
-        border-radius: .25rem;
-        position: relative;
-    }
+  .box {
+    background-color: hsl(var(--secondary));
+    border-radius: 50%;
+    position: relative;
+  }
 
-    .box:is(:hover, :focus-visible) {
-        background-color: hsl(var(--important));
-        transition: background-color 200ms linear;
-    }
+  .box:is(:hover, :focus-visible) {
+    background-color: hsl(var(--important));
+    transition: background-color 200ms linear;
+  }
 
-    .box a:is(:hover, :focus-visible) {
-        opacity: .9;
-        outline: 2px solid hsl(var(--important));
-        outline-offset: 2px;
-    }
+  .box > a:is(:hover, :focus-visible) {
+    opacity: 0.9;
+    outline: 2px solid hsl(var(--important));
+    outline-offset: 2px;
+  }
 
-    .box:is(:active) {
-        scale: .97;
-    }
+  .box:is(:active) {
+    scale: 0.97;
+  }
 
-    .box a {
-        position: absolute;
-        inset: 0;
-        border-radius: .25rem;
-    }
+  .box > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--white));
+    margin: 0.25rem;
+    border-radius: 50%;
+    overflow: hidden;
+  }
 
-    .box .box-img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: hsl(var(--white));
-        margin: .25rem;
-    }
+  .box img {
+    width: 150px;
+    aspect-ratio: 1;
+    object-fit: contain;
+    border-radius: 50%;
+  }
 
-    .box img {
-        width: 75px;
-        aspect-ratio: 1;
-        object-fit: contain;
-        padding: .25rem;
-        border-radius: .25rem;
-    }
+  .zoom-125 {
+    zoom: 125%;
+  }
 
-    .box p {
-        margin: 0;
-        margin-inline: auto;
-        font-size: 2rem;
-    }
-
-    .zoom-125 {
-        zoom: 125%;
-    }
-
-    .zoom-150 {
-        zoom: 150%;
-    }
-
-    .single-component {
-        max-width: 1000px;
-        margin-inline: auto;
-    }
-
+  .zoom-150 {
+    zoom: 150%;
+  }
 </style>
-
