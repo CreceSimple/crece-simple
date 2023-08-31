@@ -1,6 +1,13 @@
 ---
 // astro import
 import { Icon } from 'astro-icon';
+import { Image } from 'astro:assets';
+
+// img imports
+import group from '../assets/avatar/group.png'
+// import jorge from '../../assets/avatar/jorge.png'
+// import maria from '../../assets/avatar/maria-jose.png'
+// import arantzazu from '../../assets/avatar/arantzazu.png'
 ---
 
 <section id="About-us">
@@ -10,21 +17,25 @@ import { Icon } from 'astro-icon';
             <div class="about-us">
                 <!-- image group -->
                 <div class="group-image">
-                    <img src="/img/avatar/group.jpg" alt="Integrantes de Crece Simple">
+                    <!-- <img src="/img/avatar/group.jpg" alt="Integrantes de Crece Simple"> -->
+                    <Image src={group} alt="Imagen grupal Crece Simple" format="webp" />
 
-                    <h3><i>Nuestro propósito es <span class="important">AYUDAR</span> a que te enfoques tranquilo en tu meta, encargándonos de tareas contables y asesorándote mientras avanzas en tu negocio.</i></h3>
+                    <h3>Nuestro propósito es <span class="important">AYUDAR</span> a que te enfoques tranquilo en tu meta, encargándonos de tareas contables y asesorándote mientras avanzas en tu negocio.</h3>
                 </div>
 
                 <!-- image individual -->
                 <div class="image-picker">
                     <div class="image-holder selected" data-member="jorge" tabindex="0">
-                        <img class="members-image" src="/img/avatar/jorge-active.png" alt="Foto de Jorge Cortez">
+                        <!-- <img class="members-image" src="/img/avatar/jorge-active.png" alt="Foto de Jorge Cortez"> -->
+                        <!-- <Image src={jorge} alt="Jorge Crece Simple" format="webp" /> -->
                     </div>
                     <div class="image-holder" data-member="maria" tabindex="0">
-                        <img class="members-image" src="/img/avatar/maria-jose.png" alt="Foto de María José Delgado">
+                        <!-- <img class="members-image" src="/img/avatar/maria-jose.png" alt="Foto de María José Delgado"> -->
+                        <!-- <Image src={maria} alt="Maria Jose Crece Simple" format="webp" /> -->
                     </div>
                     <div class="image-holder" data-member="arantzazu" tabindex="0">
-                        <img class="members-image" src="/img/avatar/arantzazu.png" alt="Foto de Arantzazú Calderón">
+                        <!-- <img class="members-image" src="/img/avatar/arantzazu.png" alt="Foto de Arantzazú Calderón"> -->
+                        <!-- <Image src={arantzazu} alt="Arantzazu Crece Simple" format="webp" /> -->
                     </div>
                 </div>
 
@@ -366,50 +377,50 @@ import { Icon } from 'astro-icon';
 </style>
 
 <script lang="js">
-window.addEventListener('load', function() {
-    const imagePicker = document.querySelector('.image-picker');
-    const imageHolders = document.querySelectorAll('.image-holder');
-    const memberDescriptions = document.querySelectorAll('.member-description > div');
+// window.addEventListener('load', function() {
+//     const imagePicker = document.querySelector('.image-picker');
+//     const imageHolders = document.querySelectorAll('.image-holder');
+//     const memberDescriptions = document.querySelectorAll('.member-description > div');
 
-    function selectImageHolder(imageHolder, index) {
-        imageHolders.forEach((imageHolder) => {
-            imageHolder.classList.remove('selected');
-        });
-        memberDescriptions.forEach((memberDescription) => {
-            memberDescription.classList.remove('display');
-        });
-        imageHolder.classList.add('selected');
-        memberDescriptions[index].classList.add('display');
-        imagePicker.prepend(imageHolder);
+//     function selectImageHolder(imageHolder, index) {
+//         imageHolders.forEach((imageHolder) => {
+//             imageHolder.classList.remove('selected');
+//         });
+//         memberDescriptions.forEach((memberDescription) => {
+//             memberDescription.classList.remove('display');
+//         });
+//         imageHolder.classList.add('selected');
+//         memberDescriptions[index].classList.add('display');
+//         imagePicker.prepend(imageHolder);
 
-        // Change the path of the member's image
-        const imgElement = imageHolder.querySelector('img');
-        let imgSrc = imgElement.getAttribute('src');
-        if (!imgSrc.includes('-active')) {
-            imgSrc = imgSrc.replace('.png', '-active.png');
-            imgElement.setAttribute('src', imgSrc);
-        }
+//         // Change the path of the member's image
+//         const imgElement = imageHolder.querySelector('img');
+//         let imgSrc = imgElement.getAttribute('src');
+//         if (!imgSrc.includes('-active')) {
+//             imgSrc = imgSrc.replace('.png', '-active.png');
+//             imgElement.setAttribute('src', imgSrc);
+//         }
 
-        // Change the path of the other members' images back to their normal path
-        imageHolders.forEach((otherImageHolder, otherIndex) => {
-            if (otherIndex !== index) {
-                const otherImgElement = otherImageHolder.querySelector('img');
-                let otherImgSrc = otherImgElement.getAttribute('src');
-                if (otherImgSrc.includes('-active')) {
-                    otherImgSrc = otherImgSrc.replace('-active.png', '.png');
-                    otherImgElement.setAttribute('src', otherImgSrc);
-                }
-            }
-        });
-    }
+//         // Change the path of the other members' images back to their normal path
+//         imageHolders.forEach((otherImageHolder, otherIndex) => {
+//             if (otherIndex !== index) {
+//                 const otherImgElement = otherImageHolder.querySelector('img');
+//                 let otherImgSrc = otherImgElement.getAttribute('src');
+//                 if (otherImgSrc.includes('-active')) {
+//                     otherImgSrc = otherImgSrc.replace('-active.png', '.png');
+//                     otherImgElement.setAttribute('src', otherImgSrc);
+//                 }
+//             }
+//         });
+//     }
 
-    imageHolders.forEach((imageHolder, index) => {
-        imageHolder.addEventListener('mousedown', function(event) {
-            event.preventDefault();
-        });
-        imageHolder.addEventListener('click', function() {
-            selectImageHolder(imageHolder, index);
-        });
-    });
-});
+//     imageHolders.forEach((imageHolder, index) => {
+//         imageHolder.addEventListener('mousedown', function(event) {
+//             event.preventDefault();
+//         });
+//         imageHolder.addEventListener('click', function() {
+//             selectImageHolder(imageHolder, index);
+//         });
+//     });
+// });
 </script>
