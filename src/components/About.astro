@@ -42,7 +42,6 @@ import arantzazu from '../assets/avatar/arantzazu.png'
                         <h5><Icon name="mdi:account-box" /> Ingeniero Comercial</h5>
                         
                         <h5><Icon name="mdi:chart-bar" /> Años de experiencia: <span class="important-contrast">4</span></h5>
-                        <hr>
                         <h4>Sobre mí</h4>
                         <p>Mi formación incluye diplomados en análisis financiero y marketing digital, como también conocimientos en planificación estratégica. Siempre comprometido con las personas, respetando la diversidad y dignidad humana, así como también aportando ideas y experiencias que contribuyan al crecimiento de nuestros clientes. Cuando no estoy trabajando me gusta leer, escuchar música o tocar guitarra.</p>
                     </div>
@@ -51,7 +50,6 @@ import arantzazu from '../assets/avatar/arantzazu.png'
                         <h5><Icon name="mdi:account-box" /> Diseñador Gráfico</h5>
                         
                         <h5><Icon name="mdi:chart-bar" /> Años de experiencia: <span class="important-contrast">10</span></h5>
-                        <hr>
                         <h4>Sobre mí</h4>
                         <p>Hola! Desde el año 2013 he estado inmersa en el mundo del diseño gráfico, pero mi gusto por el diseño partió de mucho antes ya que estudie diseño de vestuario.  Me encanta la oportunidad que te da el diseño de expresar ideas a través de la creatividad visual. Mi enfoque es fusionar la funcionalidad de un proyecto con la estética y el buen gusto. Como podrás imaginar amo el diseño, la moda y el arte.</p>
                     </div>
@@ -60,7 +58,6 @@ import arantzazu from '../assets/avatar/arantzazu.png'
                         <h5><Icon name="mdi:account-box" /> Contador Auditor</h5>
                         
                         <h5><Icon name="mdi:chart-bar" /> Años de experiencia: <span class="important-contrast">3</span></h5>
-                        <hr>
                         <h4>Sobre mí</h4>
                         <p>Hola! Soy contador auditor con vasta experiencia en las obligaciones tributarias de los emprendedores. Me encanta trabajar en equipo y aportar con mis conocimientos a los objetivos comunes. Mi compromiso y ética me ha llevado a participar en varios proyectos desafiantes a lo largo de mi carrera. Algo más de mí que puedo decir, es que me encantan los gatos y de hecho tengo dos, una llamada Luna y otra llamada Piper.</p>
                     </div>
@@ -207,7 +204,13 @@ import arantzazu from '../assets/avatar/arantzazu.png'
 
                 h5 {
                     margin: 0;
-                    color: gray;
+                    color: hsl(var(--main-dark), .8);
+                    
+                    &:last-of-type {
+                        width: max-content;
+                        padding-bottom: 1rem;
+                        border-bottom: 1px solid hsl(var(--main-dark), .5);
+                    }
 
                     svg {
                         width: 20px;
