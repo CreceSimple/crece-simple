@@ -1,3 +1,19 @@
+---
+// astro imports
+import { Image } from 'astro:assets';
+
+// img import
+import casaBambini from '../assets/logo/casa-bambini.png'
+import rinconParrillero from '../assets/logo/rincon-parrillero.png'
+import dulceJulieta from '../assets/logo/dulce-julieta.png'
+import monkeyCoffee from '../assets/logo/monkey-coffee.png'
+import ikebana from '../assets/logo/ikebana.png'
+import ciro from '../assets/logo/ciro.png'
+import deyka from '../assets/logo/deyka.png'
+import namat from '../assets/logo/namat.png'
+import insupet from '../assets/logo/insupet.png'
+---
+
 <section id="Testimonials">
   <div>
     <h2>Quienes han confiado en nosotros</h2>
@@ -6,9 +22,8 @@
         <a
           href="https://www.instagram.com/casabambiniiquique/"
           aria-label="Casa Bambini">
-          <img
-            loading="lazy"
-            src="/img/logo/casa-bambini.png"
+          <Image
+            src={casaBambini}
             alt="Logo Casa Bambini"
           />
         </a>
@@ -17,9 +32,8 @@
         <a
           href="https://www.instagram.com/rincon.parrillero.premium/"
           aria-label="Rincon Parrilero">
-          <img
-            loading="lazy"
-            src="/img/logo/rincon-parrillero.png"
+          <Image
+            src={rinconParrillero}
             alt="Logo Rincon Parrillero"
           />
         </a>
@@ -28,9 +42,8 @@
         <a
           href="https://www.instagram.com/dulcejulietadulces/"
           aria-label="Dulce Julieta">
-          <img
-            loading="lazy"
-            src="/img/logo/dulce-julieta.png"
+          <Image
+            src={dulceJulieta}
             alt="Logo Dulce Julieta"
           />
         </a>
@@ -39,9 +52,8 @@
         <a
           href="https://www.instagram.com/monkeycoffee.cl/"
           aria-label="Monkey Coffee">
-          <img
-            loading="lazy"
-            src="/img/logo/monkey-coffee.png"
+          <Image
+            src={monkeyCoffee}
             alt="Logo Monkey Coffee"
           />
         </a>
@@ -49,9 +61,8 @@
       <div class="box">
         <div
           aria-label="Ikebana Smart Garden">
-          <img
-            loading="lazy"
-            src="/img/logo/ikebana.png"
+          <Image
+            src={ikebana}
             alt="Logo Ikebana Smart Garden"
           />
         </div>
@@ -60,9 +71,8 @@
         <a
           href="https://www.youtube.com/@cirojonasconstruccion"
           aria-label="Ciro Jonas Construccion">
-          <img
-            loading="lazy"
-            src="/img/logo/ciro.png"
+          <Image
+            src={ciro}
             alt="Logo Ciro Jonas Construccion"
           />
         </a>
@@ -70,9 +80,8 @@
       <div class="box">
         <div
           aria-label="Deyka">
-          <img
-            loading="lazy"
-            src="/img/logo/deyka.png"
+          <Image
+            src={deyka}
             alt="Logo Deyka"
           />
         </div>
@@ -81,9 +90,8 @@
         <a
           href="https://www.instagram.com/cafeterianamat.iqq/"
           aria-label="Namat">
-          <img
-            loading="lazy"
-            src="/img/logo/namat.png"
+          <Image
+            src={namat}
             alt="Logo Namat"
           />
         </a>
@@ -92,9 +100,8 @@
         <a
           href="https://www.instagram.com/insupet/"
           aria-label="Insupet">
-          <img
-            loading="lazy"
-            src="/img/logo/insupet.png"
+          <Image
+            src={insupet}
             alt="Logo Insupet"
           />
         </a>
@@ -162,7 +169,7 @@
 
   .box img {
     width: 150px;
-    aspect-ratio: 1;
+    height: 150px;
     object-fit: contain;
     border-radius: 50%;
   }
