@@ -5,9 +5,12 @@ import { Image } from 'astro:assets';
 
 // img imports
 import group from '../assets/avatar/group.jpg'
-import jorge from '../assets/avatar/jorge-active.png'
+import jorge from '../assets/avatar/jorge.png'
+import jorgeActive from '../assets/avatar/jorge-active.png'
 import maria from '../assets/avatar/maria-jose.png'
+import mariaActive from '../assets/avatar/maria-jose-active.png'
 import arantzazu from '../assets/avatar/arantzazu.png'
+import arantzazuActive from '../assets/avatar/arantzazu-active.png'
 ---
 
 <section id="About-us">
@@ -25,7 +28,7 @@ import arantzazu from '../assets/avatar/arantzazu.png'
                 <!-- image individual -->
                 <div class="image-picker">
                     <div class="image-holder selected" data-member="jorge" tabindex="0">
-                        <Image class="members-image" src={jorge} alt="Jorge Crece Simple" format="webp" />
+                        <Image class="members-image" src={jorgeActive} alt="Jorge Crece Simple" format="webp" />
                     </div>
                     <div class="image-holder" data-member="maria" tabindex="0">
                         <Image class="members-image" src={maria} alt="Maria Jose Crece Simple" format="webp" />
