@@ -1,427 +1,575 @@
 ---
 // astro import
-import { Icon } from 'astro-icon';
-import { Image } from 'astro:assets';
+import { Icon } from "astro-icon";
+import { Image } from "astro:assets";
 
 // img imports
-import group from '../assets/avatar/group.jpg'
-import jorge from '../assets/avatar/jorge.png'
-import jorgeActive from '../assets/avatar/jorge-active.png'
-import maria from '../assets/avatar/maria-jose.png'
-import mariaActive from '../assets/avatar/maria-jose-active.png'
-import arantzazu from '../assets/avatar/arantzazu.png'
-import arantzazuActive from '../assets/avatar/arantzazu-active.png'
+import group from "../assets/avatar/group.jpg";
+import jorge from "../assets/avatar/jorge.png";
+import jorgeActive from "../assets/avatar/jorge-active.png";
+import maria from "../assets/avatar/maria-jose.png";
+import mariaActive from "../assets/avatar/maria-jose-active.png";
+import arantzazu from "../assets/avatar/arantzazu.png";
+import arantzazuActive from "../assets/avatar/arantzazu-active.png";
 ---
 
 <section id="About-us">
-    <div>
-        <h2>Nosotros</h2>
-        <div class="wrapper">
-            <div class="about-us">
-                <!-- image group -->
-                <div class="group-image">
-                    <Image src={group} alt="Imagen grupal Crece Simple" format="webp" />
+  <div>
+    <h2>Nosotros</h2>
+    <div class="wrapper">
+      <div class="about-us">
+        <!-- image group -->
+        <div class="group-image">
+          <Image
+            src={group}
+            alt="Imagen grupal Crece Simple"
+            format="webp"
+          />
 
-                    <h3>Nuestro propósito es <span class="important">AYUDAR</span> a que te enfoques tranquilo en tu meta, encargándonos de tareas contables y asesorándote mientras avanzas en tu negocio.</h3>
-                </div>
-
-                <!-- image individual -->
-                <div class="image-picker">
-                    <div class="image-holder selected" data-member="jorge" tabindex="0">
-                        <Image class="members-image" src={jorgeActive} alt="Jorge Crece Simple" format="webp" />
-                    </div>
-                    <div class="image-holder" data-member="maria" tabindex="0">
-                        <Image class="members-image" src={maria} alt="Maria Jose Crece Simple" format="webp" />
-                    </div>
-                    <div class="image-holder" data-member="arantzazu" tabindex="0">
-                        <Image class="members-image" src={arantzazu} alt="Arantzazu Crece Simple" format="webp" />
-                    </div>
-                </div>
-
-                <!-- descriptions -->
-                <div class="member-description">
-                    <div class="display" data-member="jorge">
-                        <h4>Jorge Cortez</h4>
-                        <h5><Icon name="mdi:account-box" /> Ingeniero Comercial</h5>
-                        
-                        <h5><Icon name="mdi:chart-bar" /> Años de experiencia: <span class="important-contrast">4</span></h5>
-                        <h4>Sobre mí</h4>
-                        <p>Mi formación incluye diplomados en análisis financiero y marketing digital, como también conocimientos en planificación estratégica. Siempre comprometido con las personas, respetando la diversidad y dignidad humana, así como también aportando ideas y experiencias que contribuyan al crecimiento de nuestros clientes. Cuando no estoy trabajando me gusta leer, escuchar música o tocar guitarra.</p>
-                    </div>
-                    <div data-member="maria">
-                        <h4>María José Delgado</h4>
-                        <h5><Icon name="mdi:account-box" /> Diseñador Gráfico</h5>
-                        
-                        <h5><Icon name="mdi:chart-bar" /> Años de experiencia: <span class="important-contrast">10</span></h5>
-                        <h4>Sobre mí</h4>
-                        <p>Hola! Desde el año 2013 he estado inmersa en el mundo del diseño gráfico, pero mi gusto por el diseño partió de mucho antes ya que estudie diseño de vestuario.  Me encanta la oportunidad que te da el diseño de expresar ideas a través de la creatividad visual. Mi enfoque es fusionar la funcionalidad de un proyecto con la estética y el buen gusto. Como podrás imaginar amo el diseño, la moda y el arte.</p>
-                    </div>
-                    <div data-member="arantzazu">
-                        <h4>Arantzazu Calderón</h4>
-                        <h5><Icon name="mdi:account-box" /> Contador Auditor</h5>
-                        
-                        <h5><Icon name="mdi:chart-bar" /> Años de experiencia: <span class="important-contrast">3</span></h5>
-                        <h4>Sobre mí</h4>
-                        <p>Hola! Soy contador auditor con vasta experiencia en las obligaciones tributarias de los emprendedores. Me encanta trabajar en equipo y aportar con mis conocimientos a los objetivos comunes. Mi compromiso y ética me ha llevado a participar en varios proyectos desafiantes a lo largo de mi carrera. Algo más de mí que puedo decir, es que me encantan los gatos y de hecho tengo dos, una llamada Luna y otra llamada Piper.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div>
-        <h2>Te ayudamos en</h2>
-        <div class="about-us-wrapper">
-            <div class="proposal fade">
-                <span class="icon"><Icon class="proposal-icon" name="mdi:finance" /></span>
-                <h3 class="title">Contabilidad y finanzas</h3>
-                <p class="description">Nuestro equipo está capacitado para ofrecer servicios diseñados para optimizar la salud financiera de pequeñas y medianas empresas tanto en Iquique de forma presencial como a nivel nacional de  forma online, así mismo a cumplir con tus obligaciones tributarias ayudándote a tomar decisiones financieras informadas.</p>
-            </div>
-            <div class="proposal fade">
-                <span class="icon"><Icon class="proposal-icon" name="mdi:fountain-pen-tip" /></span>
-                <h3 class="title">Imagen corporativa</h3>
-                <p class="description">En Crece Simple te ayudamos a transformar la percepción que tiene el mundo de tu empresa. Combinamos creatividad y estrategia para construir una identidad única y poderosa que refleje el espíritu de tu marca.</p>
-            </div>
-            <div class="proposal fade">
-                <span class="icon"><Icon class="proposal-icon" name="ion:md-megaphone" /></span>
-                <h3 class="title">Marketing</h3>
-                <p class="description">Nuestro equipo de profesionales ofrece soluciones de marketing personalizadas para pequeñas y medianas empresas dentro de la ciudad de Iquique y a nivel nacional, ayudandote a aumentar la visibilidad de tu negocio, atraer más clientes y aumentar tus ventas.</p>
-            </div>
+          <h3>
+            Nuestro propósito es <span class="important">AYUDAR</span> a que te
+            enfoques tranquilo en tu meta, encargándonos de tareas contables y
+            asesorándote mientras avanzas en tu negocio.
+          </h3>
         </div>
 
-    </div>
-    <div class="divider">
-        <div class="custom-shape-divider-bottom-1690984327">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
-            </svg>
+        <!-- image individual -->
+        <div class="image-picker">
+          <div
+            class="image-holder selected"
+            data-member="jorge"
+            tabindex="0">
+            <Image
+              class="members-image inactive"
+              src={jorge}
+              data-img-type={jorge}
+              alt="Jorge Crece Simple"
+              format="webp"
+            />
+            <Image
+              class="members-image active"
+              src={jorgeActive}
+              data-img-type={jorgeActive}
+              alt="Jorge Crece Simple"
+              format="webp"
+            />
+          </div>
+          <div
+            class="image-holder"
+            data-member="maria"
+            tabindex="0">
+            <Image
+              class="members-image active"
+              src={maria}
+              data-img-type={maria}
+              alt="Maria Jose Crece Simple"
+              format="webp"
+            />
+            <Image
+              class="members-image inactive"
+              src={mariaActive}
+              data-img-type={mariaActive}
+              alt="Maria Jose Crece Simple"
+              format="webp"
+            />
+          </div>
+          <div
+            class="image-holder"
+            data-member="arantzazu"
+            tabindex="0">
+            <Image
+              class="members-image active"
+              src={arantzazu}
+              data-img-type={arantzazu}
+              alt="Arantzazu Crece Simple"
+              format="webp"
+            />
+            <Image
+              class="members-image inactive"
+              src={arantzazuActive}
+              data-img-type={arantzazuActive}
+              alt="Arantzazu Crece Simple"
+              format="webp"
+            />
+          </div>
         </div>
+
+        <!-- descriptions -->
+        <div class="member-description">
+          <div
+            class="display"
+            data-member="jorge">
+            <h4>Jorge Cortez</h4>
+            <h5><Icon name="mdi:account-box" /> Ingeniero Comercial</h5>
+
+            <h5>
+              <Icon name="mdi:chart-bar" /> Años de experiencia: <span
+                class="important-contrast">4</span>
+            </h5>
+            <h4>Sobre mí</h4>
+            <p>
+              Mi formación incluye diplomados en análisis financiero y marketing
+              digital, como también conocimientos en planificación estratégica.
+              Siempre comprometido con las personas, respetando la diversidad y
+              dignidad humana, así como también aportando ideas y experiencias
+              que contribuyan al crecimiento de nuestros clientes. Cuando no
+              estoy trabajando me gusta leer, escuchar música o tocar guitarra.
+            </p>
+          </div>
+          <div data-member="maria">
+            <h4>María José Delgado</h4>
+            <h5><Icon name="mdi:account-box" /> Diseñador Gráfico</h5>
+
+            <h5>
+              <Icon name="mdi:chart-bar" /> Años de experiencia: <span
+                class="important-contrast">10</span>
+            </h5>
+            <h4>Sobre mí</h4>
+            <p>
+              Hola! Desde el año 2013 he estado inmersa en el mundo del diseño
+              gráfico, pero mi gusto por el diseño partió de mucho antes ya que
+              estudie diseño de vestuario. Me encanta la oportunidad que te da
+              el diseño de expresar ideas a través de la creatividad visual. Mi
+              enfoque es fusionar la funcionalidad de un proyecto con la
+              estética y el buen gusto. Como podrás imaginar amo el diseño, la
+              moda y el arte.
+            </p>
+          </div>
+          <div data-member="arantzazu">
+            <h4>Arantzazu Calderón</h4>
+            <h5><Icon name="mdi:account-box" /> Contador Auditor</h5>
+
+            <h5>
+              <Icon name="mdi:chart-bar" /> Años de experiencia: <span
+                class="important-contrast">3</span>
+            </h5>
+            <h4>Sobre mí</h4>
+            <p>
+              Hola! Soy contador auditor con vasta experiencia en las
+              obligaciones tributarias de los emprendedores. Me encanta trabajar
+              en equipo y aportar con mis conocimientos a los objetivos comunes.
+              Mi compromiso y ética me ha llevado a participar en varios
+              proyectos desafiantes a lo largo de mi carrera. Algo más de mí que
+              puedo decir, es que me encantan los gatos y de hecho tengo dos,
+              una llamada Luna y otra llamada Piper.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div>
+    <h2>Te ayudamos en</h2>
+    <div class="about-us-wrapper">
+      <div class="proposal fade">
+        <span class="icon"
+          ><Icon
+            class="proposal-icon"
+            name="mdi:finance"
+          /></span
+        >
+        <h3 class="title">Contabilidad y finanzas</h3>
+        <p class="description">
+          Nuestro equipo está capacitado para ofrecer servicios diseñados para
+          optimizar la salud financiera de pequeñas y medianas empresas tanto en
+          Iquique de forma presencial como a nivel nacional de forma online, así
+          mismo a cumplir con tus obligaciones tributarias ayudándote a tomar
+          decisiones financieras informadas.
+        </p>
+      </div>
+      <div class="proposal fade">
+        <span class="icon"
+          ><Icon
+            class="proposal-icon"
+            name="mdi:fountain-pen-tip"
+          /></span
+        >
+        <h3 class="title">Imagen corporativa</h3>
+        <p class="description">
+          En Crece Simple te ayudamos a transformar la percepción que tiene el
+          mundo de tu empresa. Combinamos creatividad y estrategia para
+          construir una identidad única y poderosa que refleje el espíritu de tu
+          marca.
+        </p>
+      </div>
+      <div class="proposal fade">
+        <span class="icon"
+          ><Icon
+            class="proposal-icon"
+            name="ion:md-megaphone"
+          /></span
+        >
+        <h3 class="title">Marketing</h3>
+        <p class="description">
+          Nuestro equipo de profesionales ofrece soluciones de marketing
+          personalizadas para pequeñas y medianas empresas dentro de la ciudad
+          de Iquique y a nivel nacional, ayudandote a aumentar la visibilidad de
+          tu negocio, atraer más clientes y aumentar tus ventas.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="divider">
+    <div class="custom-shape-divider-bottom-1690984327">
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none">
+        <path
+          d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+          class="shape-fill"
+        ></path>
+      </svg>
+    </div>
+  </div>
 </section>
 
-
 <style lang="scss">
-    .about-us {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
+  .about-us {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
 
-        @media only screen and (max-width: 860px) {
-            grid-template-columns: 1fr;
-        }
-
-        .group-image {
-            position: relative;
-
-            img {
-                display: block;
-                max-width: 100%;
-                height: initial;
-            }
-
-            h3 {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                padding: 2em 3em;
-                color: hsl(var(--white));
-                background-color: hsl(var(--main-dark), .7);
-                font-size: clamp(0.975rem, 0.6676rem + 0.6471vw, 1.25rem);
-                line-height: 1.6;
-
-                @media (max-width: 760px) {
-                    position: static;
-                    padding: 1rem;
-                    color: hsl(var(--main-dark));
-                    background-color: hsl(var(--white));
-                    font-size: clamp(0.875rem, 0.875rem + 0.7895vw, 1.25rem);
-                }
-            }
-        }
-
-        .image-picker {
-            display: flex;
-            flex-wrap: wrap;
-            gap: .5rem;
-
-            img {
-                display: block;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: center;
-                border-radius: .25rem;
-            }
-
-            .image-holder {
-                flex: 1;
-
-                border-radius: .25rem;
-                cursor: pointer;
-
-                &:is(:hover, :focus-visible) {
-                    opacity: .8;
-                }
-
-                &:is(.selected) {
-                   
-                }
-            }
-        }
-
-        .member-description {
-            & > * {
-                display: flex;
-                flex-direction: column;
-
-                opacity: 0;
-                visibility: collapse;
-                position: absolute;
-                pointer-events: none;
-                
-
-                &:is(.display) {
-                    opacity: 1;
-                    visibility: visible;
-                    position: static;
-                    pointer-events: initial;
-                    transition: opacity 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
-                }
-
-                hr {
-                    width: 100%;
-                    border-color: hsl(0 0% 35% / .5);
-                }
-
-                h4 {
-                    font-size: 2rem;
-                    margin-block-end: 0;
-                    margin-block-start: 1.5rem;
-
-                    &:first-child {
-                        margin-block-start: 0;
-                    }
-                }
-
-                h5 {
-                    margin: 0;
-                    color: hsl(var(--main-dark), .8);
-                    
-                    &:last-of-type {
-                        width: max-content;
-                        padding-bottom: 1rem;
-                        border-bottom: 1px solid hsl(var(--main-dark), .5);
-                    }
-
-                    svg {
-                        width: 20px;
-                        position: relative;
-                        top: 4px;
-                    }
-                }
-            }
-        }
+    @media only screen and (max-width: 860px) {
+      grid-template-columns: 1fr;
     }
 
+    .group-image {
+      position: relative;
 
-    .main-picture {
-        max-width: 100%;
-    }
-
-    .about-us-icon {
-        display: inline;
-        width: 1.5rem;
-        aspect-ratio: 1;
-        position: relative;
-        top: 3px;
-        color: hsl(var(--important-contrast))
-    }
-
-    .proposal-icon {
+      img {
         display: block;
-        width: 2rem;
-        aspect-ratio: 1;
-        color: hsl(var(--white));
-    }
+        max-width: 100%;
+        height: initial;
+      }
 
-    #About-us {
-        color: hsl(var(--main-dark));
-        background-color: hsl(var(--white));
-        position: relative;
-    }
-
-    #About-us > div:first-child {
-        margin-block-end: 5rem;
-    }
-
-    #About-us > div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        filter: hue-rotate();
-
-
-        width: 100%;
-        max-width: 1100px;
-        margin-inline: auto;
-        padding: var(--padding);
-    }
-
-    #About-us > div > h3 {
-        margin: 0;
-        font-size: .875rem;
-        color: hsl(var(--important));    
-
-        text-align: center;
-    }
-
-    #About-us > div > h2 {
-        font-size: 3rem;
-        margin-block-start: 0;
-        
-        text-align: center;
-    }
-
-    .about-us h3 {
-        margin: 0;
-    }
-
-    @media only screen and (max-width: 699px) {
-        .about-us {
-            grid-template-columns: repeat(1, 1fr);
-            gap: 1rem;
-        }
-    }
-
-    .about-us-wrapper {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
-        gap: var(--padding);
-        justify-items: center;
-        margin-block-end: 2rem;
-    }
-
-    @media only screen and (max-width: 864px) {
-        .about-us-wrapper .proposal:nth-of-type(3) {
-            grid-column: 1 / 2 span;
-        }
-    }
-
-    @media only screen and (max-width: 595px) {
-        .about-us-wrapper .proposal:nth-of-type(3) {
-            grid-column: 1 / 1;
-        }
-    }
-
-    .proposal {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        max-width: 18rem;
-
-        padding: var(--padding);
-        border-radius: var(--radius-accent);
-        line-height: 1.6;
-    }
-
-    .proposal:is(:hover, :focus-visible) {
-        background-color: hsl(var(--main-dark), 5%);
-    }
-
-    .icon {
-        display: grid;
-        place-items: center;
-        justify-content: center;
-
-        width: calc(var(--padding) + 0.75rem);
-        height: calc(var(--padding) + 0.75rem);
-
-        padding: calc(var(--padding) + .75rem);
-        background-color: hsl(var(--important));
-        border-radius: 50%;
-    }
-
-    .title {
-        text-align: center;
-    }
-
-    .divider {
+      h3 {
         position: absolute;
         bottom: 0;
         left: 0;
         right: 0;
-        max-width: 100% !important;
+        padding: 2em 3em;
+        color: hsl(var(--white));
+        background-color: hsl(var(--main-dark), 0.7);
+        font-size: clamp(0.975rem, 0.6676rem + 0.6471vw, 1.25rem);
+        line-height: 1.6;
+
+        @media (max-width: 760px) {
+          position: static;
+          padding: 1rem;
+          color: hsl(var(--main-dark));
+          background-color: hsl(var(--white));
+          font-size: clamp(0.875rem, 0.875rem + 0.7895vw, 1.25rem);
+        }
+      }
     }
 
-    .custom-shape-divider-bottom-1690984327 {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-        transform: rotate(180deg);
-    }
+    .image-picker {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
 
-    .custom-shape-divider-bottom-1690984327 svg {
-        position: relative;
+      img {
         display: block;
-        width: calc(100% + 1.3px);
-        height: 100px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 0.25rem;
+      }
+
+      .image-holder {
+        flex: 1;
+
+        border-radius: 0.25rem;
+        cursor: pointer;
+
+        &:is(:hover, :focus-visible) {
+          opacity: 0.8;
+        }
+
+        img {
+          &:is(.active) {
+            display: block;
+          }
+
+          &:is(.inactive) {
+            display: none;
+          }
+        }
+      }
     }
 
-    .custom-shape-divider-bottom-1690984327 .shape-fill {
-        fill: #9cb8bc;
+    .member-description {
+      & > * {
+        display: flex;
+        flex-direction: column;
+
+        opacity: 0;
+        visibility: collapse;
+        position: absolute;
+        pointer-events: none;
+
+        &:is(.display) {
+          opacity: 1;
+          visibility: visible;
+          position: static;
+          pointer-events: initial;
+          transition: opacity 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        hr {
+          width: 100%;
+          border-color: hsl(0 0% 35% / 0.5);
+        }
+
+        h4 {
+          font-size: 2rem;
+          margin-block-end: 0;
+          margin-block-start: 1.5rem;
+
+          &:first-child {
+            margin-block-start: 0;
+          }
+        }
+
+        h5 {
+          margin: 0;
+          color: hsl(var(--main-dark), 0.8);
+
+          &:last-of-type {
+            width: max-content;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid hsl(var(--main-dark), 0.5);
+          }
+
+          svg {
+            width: 20px;
+            position: relative;
+            top: 4px;
+          }
+        }
+      }
     }
+  }
+
+  .main-picture {
+    max-width: 100%;
+  }
+
+  .about-us-icon {
+    display: inline;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    position: relative;
+    top: 3px;
+    color: hsl(var(--important-contrast));
+  }
+
+  .proposal-icon {
+    display: block;
+    width: 2rem;
+    aspect-ratio: 1;
+    color: hsl(var(--white));
+  }
+
+  #About-us {
+    color: hsl(var(--main-dark));
+    background-color: hsl(var(--white));
+    position: relative;
+  }
+
+  #About-us > div:first-child {
+    margin-block-end: 5rem;
+  }
+
+  #About-us > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    filter: hue-rotate();
+
+    width: 100%;
+    max-width: 1100px;
+    margin-inline: auto;
+    padding: var(--padding);
+  }
+
+  #About-us > div > h3 {
+    margin: 0;
+    font-size: 0.875rem;
+    color: hsl(var(--important));
+
+    text-align: center;
+  }
+
+  #About-us > div > h2 {
+    font-size: 3rem;
+    margin-block-start: 0;
+
+    text-align: center;
+  }
+
+  .about-us h3 {
+    margin: 0;
+  }
+
+  @media only screen and (max-width: 699px) {
+    .about-us {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem;
+    }
+  }
+
+  .about-us-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    gap: var(--padding);
+    justify-items: center;
+    margin-block-end: 2rem;
+  }
+
+  @media only screen and (max-width: 864px) {
+    .about-us-wrapper .proposal:nth-of-type(3) {
+      grid-column: 1 / 2 span;
+    }
+  }
+
+  @media only screen and (max-width: 595px) {
+    .about-us-wrapper .proposal:nth-of-type(3) {
+      grid-column: 1 / 1;
+    }
+  }
+
+  .proposal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 18rem;
+
+    padding: var(--padding);
+    border-radius: var(--radius-accent);
+    line-height: 1.6;
+  }
+
+  .proposal:is(:hover, :focus-visible) {
+    background-color: hsl(var(--main-dark), 5%);
+  }
+
+  .icon {
+    display: grid;
+    place-items: center;
+    justify-content: center;
+
+    width: calc(var(--padding) + 0.75rem);
+    height: calc(var(--padding) + 0.75rem);
+
+    padding: calc(var(--padding) + 0.75rem);
+    background-color: hsl(var(--important));
+    border-radius: 50%;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100% !important;
+  }
+
+  .custom-shape-divider-bottom-1690984327 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .custom-shape-divider-bottom-1690984327 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+  }
+
+  .custom-shape-divider-bottom-1690984327 .shape-fill {
+    fill: #9cb8bc;
+  }
 </style>
 
 <script lang="js">
-window.addEventListener('load', function() {
-    const imagePicker = document.querySelector('.image-picker');
-    const imageHolders = document.querySelectorAll('.image-holder');
-    const memberDescriptions = document.querySelectorAll('.member-description > div');
+  window.addEventListener("load", function () {
+    const imageHolders = document.querySelectorAll(".image-holder");
 
-    function selectImageHolder(imageHolder, index) {
-        imageHolders.forEach((imageHolder) => {
-            imageHolder.classList.remove('selected');
-        });
-        memberDescriptions.forEach((memberDescription) => {
-            memberDescription.classList.remove('display');
-        });
-        imageHolder.classList.add('selected');
-        memberDescriptions[index].classList.add('display');
-        imagePicker.prepend(imageHolder);
+    function selectImageHolder(imageHolder) {
+      // If the clicked imageHolder is already selected, do nothing
+      if (imageHolder.classList.contains("selected")) {
+        return;
+      }
 
-        // Change the path of the member's image
-        const imgElement = imageHolder.querySelector('img');
-        let imgSrc = imgElement.getAttribute('src');
-        if (!imgSrc.includes('-active')) {
-            imgSrc = imgSrc.replace('.png', '-active.png');
-            imgElement.setAttribute('src', imgSrc);
-        }
+      // Find the currently selected imageHolder
+      const currentSelected = document.querySelector(".image-holder.selected");
 
-        // Change the path of the other members' images back to their normal path
-        imageHolders.forEach((otherImageHolder, otherIndex) => {
-            if (otherIndex !== index) {
-                const otherImgElement = otherImageHolder.querySelector('img');
-                let otherImgSrc = otherImgElement.getAttribute('src');
-                if (otherImgSrc.includes('-active')) {
-                    otherImgSrc = otherImgSrc.replace('-active.png', '.png');
-                    otherImgElement.setAttribute('src', otherImgSrc);
-                }
-            }
-        });
+      // If there is a currently selected imageHolder, remove 'selected' class and swap 'active' and 'inactive' classes for its images
+      if (currentSelected) {
+        currentSelected.classList.remove("selected");
+        swapImageClasses(currentSelected);
+        hideMemberDescription(currentSelected);
+      }
+
+      // Add the 'selected' class to the clicked imageHolder, swap 'active' and 'inactive' classes for its images, and show its member description
+      imageHolder.classList.add("selected");
+      swapImageClasses(imageHolder);
+      showMemberDescription(imageHolder);
     }
 
-    imageHolders.forEach((imageHolder, index) => {
-        imageHolder.addEventListener('mousedown', function(event) {
-            event.preventDefault();
-        });
-        imageHolder.addEventListener('click', function() {
-            selectImageHolder(imageHolder, index);
-        });
+    function hideMemberDescription(imageHolder) {
+      const member = imageHolder.getAttribute("data-member");
+      const memberDescription = document.querySelector(
+        `.member-description > div[data-member="${member}"]`
+      );
+      if (memberDescription) {
+        memberDescription.classList.remove("display");
+      }
+    }
+
+    function showMemberDescription(imageHolder) {
+      const member = imageHolder.getAttribute("data-member");
+      const memberDescription = document.querySelector(
+        `.member-description > div[data-member="${member}"]`
+      );
+      if (memberDescription) {
+        memberDescription.classList.add("display");
+      }
+    }
+
+    function swapImageClasses(imageHolder) {
+      const images = imageHolder.querySelectorAll(".members-image");
+      images.forEach((image) => {
+        if (image.classList.contains("active")) {
+          image.classList.remove("active");
+          image.classList.add("inactive");
+        } else if (image.classList.contains("inactive")) {
+          image.classList.remove("inactive");
+          image.classList.add("active");
+        }
+      });
+    }
+
+    // Add click event listeners to all imageHolders
+    imageHolders.forEach((imageHolder) => {
+      imageHolder.addEventListener("click", function () {
+        selectImageHolder(imageHolder);
+      });
     });
-});
+  });
 </script>
